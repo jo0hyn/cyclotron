@@ -815,7 +815,7 @@ function computeEnergyResidual(vx, vy, gamma, relOn, c_norm) {
 // ─── 회전 감지 (y 부호 변화로 반 회전 카운트) ───
 function detectRevolution(prevY, currY, prevX) {
   // x > 0 인 영역에서 y가 음→양으로 바뀌면 한 바퀴
-  if (prevX > 0 && prevY < 0 && currY >= 0) return true;
+  if (prevX > 0 && prevY >= 0 && currY < 0) return true;
   return false;
 }
 
